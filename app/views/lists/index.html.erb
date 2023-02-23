@@ -1,0 +1,11 @@
+<h1>Main List</h1>
+
+<ul>
+  <% @lists.each do |list|%>
+    <li><%= link_to list.title, list_path(list) %></li>
+    <%# <%= link_to list_path(list), class:"text-decoration-none" do %> %>
+    <%= list.name %>
+  <% end %>
+</ul>
+
+<%= link_to '+ Add a new list', lists_new_path %>
