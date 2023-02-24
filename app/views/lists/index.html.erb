@@ -2,10 +2,8 @@
 
 <ul>
   <% @lists.each do |list|%>
-    <li><%= link_to list.title, list_path(list) %></li>
-    <%# <%= link_to list_path(list), class:"text-decoration-none" do %> %>
-    <%= list.name %>
+    <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
 
-<%= link_to '+ Add a new list', lists_new_path %>
+<%= link_to '+ Add a new list', new_list_path %>
